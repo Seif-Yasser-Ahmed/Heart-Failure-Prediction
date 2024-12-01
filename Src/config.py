@@ -14,6 +14,30 @@ __C.HeartFailure.PATH = '../Dataset/dataset.csv'
 __C.HeartFailure.LOGS_LOSSES_PATH = '../Logs/Losses'
 __C.HeartFailure.LOGS_PLOTS_PATH = '../Logs/Plots'
 
+__C.HeartFailure.MODELS_PATH = '../Models'
+
+__C.HeartFailure.TASK_NAME = 'HeartFailure'
+__C.HeartFailure.MODEL_NAME = 'DecisionTree'
+
+__C.HeartFailure.NORMALIZER = 'MinMaxScaler'
+__C.HeartFailure.Encoder = 'OneHotEncoder'
+
+__C.HeartFailure.SPLIT = 0.2
+__C.HeartFailure.RANDOM_STATE = 42
+
+__C.HeartFailure.COLUMNS = ['Age', 'Sex', 'ChestPainType', 'RestingBP', 'Cholesterol', 'FastingBS',
+                            'RestingECG', 'MaxHR', 'ExerciseAngina', 'Oldpeak', 'ST_Slope',
+                            'HeartDisease']
+
+__C.HeartFailure.TARGET = ['HeartDisease']
+
+
+__C.HeartFailure.CATEGORICAL_COLUMNS = [
+    'Sex', 'ChestPainType', 'RestingECG', 'ExerciseAngina', 'ST_Slope']
+
+__C.HeartFailure.NUMERICAL_COLUMNS = [
+    'Age', 'RestingBP', 'Cholesterol', 'FastingBS', 'MaxHR', 'Oldpeak']
+
 # __C.HeartFailure.MODELS_PATH = '/home/hzxie/Datasets/HeartFailure/HeartFailureVox32/%s/%s/model.binvox'
 
 
@@ -32,14 +56,7 @@ __C.HeartFailure.LOGS_PLOTS_PATH = '../Logs/Plots'
 
 # __C.CONST.BATCH_SIZE = 64
 
-#
-# Directories
-#
-# __C.DIR = edict()
-# __C.DIR.OUT_PATH = './output'
-# __C.DIR.RANDOM_BG_PATH = '/home/hzxie/Datasets/SUN2012/JPEGImages'
 
-#
 # Network
 #
 # __C.NETWORK = edict()
@@ -52,8 +69,3 @@ __C.HeartFailure.LOGS_PLOTS_PATH = '../Logs/Plots'
 # __C.TRAIN.NUM_WORKER = 4             # number of data workers
 # __C.TRAIN.NUM_EPOCHES = 250
 # __C.TRAIN.POLICY = 'adam'        # available options: sgd, adam
-
-
-#
-# Testing options
-#
