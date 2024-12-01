@@ -38,6 +38,33 @@ __C.HeartFailure.CATEGORICAL_COLUMNS = [
 __C.HeartFailure.NUMERICAL_COLUMNS = [
     'Age', 'RestingBP', 'Cholesterol', 'FastingBS', 'MaxHR', 'Oldpeak']
 
+
+__C.HeartFailure.SVM_parameters_grid = edict()
+__C.HeartFailure.SVM_parameters_grid.C = [0.1, 1, 10, 100]
+__C.HeartFailure.SVM_parameters_grid.gamma = [1, 0.1, 0.01, 0.001]
+__C.HeartFailure.SVM_parameters_grid.kernel = [
+    'linear', 'poly', 'rbf', 'sigmoid']
+
+__C.HeartFailure.DT_parameters_grid = edict()
+
+__C.HeartFailure.DT_parameters_grid.max_depth = [
+    10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+__C.HeartFailure.DT_parameters_grid.min_samples_split = [2, 5, 10]
+# __C.HeartFailure.DT_parameters_grid.MIN_SAMPLES_LEAF = [1, 2, 4]
+# __C.HeartFailure.DT_parameters_grid.MAX_FEATURES = ['auto', 'sqrt', 'log2']
+__C.HeartFailure.DT_parameters_grid.criterion = ['gini', 'entropy']
+
+
+__C.HeartFailure.RF_parameters_grid = edict()
+__C.HeartFailure.RF_parameters_grid.n_estimators = [
+    int(x) for x in range(100, 1200, 100)]
+__C.HeartFailure.RF_parameters_grid.max_features = ['auto', 'sqrt']
+__C.HeartFailure.RF_parameters_grid.max_depth = [
+    int(x) for x in range(10, 110, 10)]
+__C.HeartFailure.RF_parameters_grid.min_samples_split = [2, 5, 10]
+__C.HeartFailure.RF_parameters_grid.min_samples_leaf = [1, 2, 4]
+__C.HeartFailure.RF_parameters_grid.bootstrap = [True, False]
+
 # __C.HeartFailure.MODELS_PATH = '/home/hzxie/Datasets/HeartFailure/HeartFailureVox32/%s/%s/model.binvox'
 
 
