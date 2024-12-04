@@ -40,10 +40,13 @@ __C.HeartFailure.NUMERICAL_COLUMNS = [
 
 
 __C.HeartFailure.SVM_parameters_grid = edict()
-__C.HeartFailure.SVM_parameters_grid.C = [0.1, 1, 10, 100]
-__C.HeartFailure.SVM_parameters_grid.gamma = [1, 0.1, 0.01, 0.001]
+__C.HeartFailure.SVM_parameters_grid.C = [0.01, 0.1, 1, 10, 100]
+__C.HeartFailure.SVM_parameters_grid.gamma = [
+    'scale', 'auto', 0.001, 0.01, 0.1, 1, 10]
 __C.HeartFailure.SVM_parameters_grid.kernel = [
     'linear', 'poly', 'rbf', 'sigmoid']
+__C.HeartFailure.SVM_parameters_grid.class_weight = ['balanced', None]
+
 
 __C.HeartFailure.DT_parameters_grid = edict()
 
