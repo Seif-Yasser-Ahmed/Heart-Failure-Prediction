@@ -10,3 +10,4 @@ tqdm
 cloudpickle
 pathlib
 psutil
+openpyxl
