@@ -9,7 +9,7 @@ cfg = __C
 # __C.DATASETS = edict()
 __C.HeartFailure = edict()
 
-__C.HeartFailure.PATH = '../Dataset/dataset.csv'
+__C.HeartFailure.PATH = '../Dataset/heart.csv'
 
 __C.HeartFailure.LOGS_LOSSES_PATH = '../Logs/Losses'
 __C.HeartFailure.LOGS_PLOTS_PATH = '../Logs/Plots'
