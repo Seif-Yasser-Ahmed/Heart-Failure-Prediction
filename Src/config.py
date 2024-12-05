@@ -1,5 +1,5 @@
 from easydict import EasyDict as edict
-
+import numpy as np
 __C = edict()
 cfg = __C
 
@@ -87,6 +87,7 @@ __C.HeartFailure.MLP_parameters_grid = edict()
 
 #! Naive Bayes
 __C.HeartFailure.Bayes_parameters_grid = edict()
+__C.HeartFailure.Bayes_parameters_grid.var_smoothing = np.logspace(-9, 0, 50)
 
 #! XGBoost
 __C.HeartFailure.XGB_parameters_grid = edict()
