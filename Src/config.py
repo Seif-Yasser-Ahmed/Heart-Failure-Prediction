@@ -54,7 +54,7 @@ __C.HeartFailure.SVM_parameters_grid.class_weight = ['balanced', None]
 __C.HeartFailure.DT_parameters_grid = edict()
 
 __C.HeartFailure.DT_parameters_grid.max_depth = [
-    10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+    3, 5, 10, None]
 __C.HeartFailure.DT_parameters_grid.min_samples_split = [2, 5, 10]
 # __C.HeartFailure.DT_parameters_grid.MIN_SAMPLES_LEAF = [1, 2, 4]
 # __C.HeartFailure.DT_parameters_grid.MAX_FEATURES = ['auto', 'sqrt', 'log2']
@@ -94,7 +94,7 @@ __C.HeartFailure.GaussBayes_parameters_grid.var_smoothing = np.logspace(
 #! Categorical Naive Bayes
 __C.HeartFailure.CatBayes_parameters_grid = edict()
 __C.HeartFailure.CatBayes_parameters_grid.alpha = [0.01, 0.1, 0.5, 1.0, 10.0]
-__C.HeartFailure.CatBayes_parameters_grid.fit_prior[True, False]
+__C.HeartFailure.CatBayes_parameters_grid.fit_prior = [True, False]
 
 
 #! Bernoulli Naive Bayes
