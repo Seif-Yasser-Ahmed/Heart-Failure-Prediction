@@ -13,6 +13,7 @@ __C.HeartFailure.PATH = '../Dataset/dataset.csv'
 
 __C.HeartFailure.LOGS_LOSSES_PATH = '../Logs/Losses'
 __C.HeartFailure.LOGS_PLOTS_PATH = '../Logs/Plots'
+__C.HeartFailure.LOGS_REPORTS_PATH = '../Logs/Reports'
 
 __C.HeartFailure.MODELS_PATH = '../Models'
 
@@ -67,6 +68,15 @@ __C.HeartFailure.RF_parameters_grid.max_depth = [
 __C.HeartFailure.RF_parameters_grid.min_samples_split = [2, 5, 10]
 __C.HeartFailure.RF_parameters_grid.min_samples_leaf = [1, 2, 4]
 __C.HeartFailure.RF_parameters_grid.bootstrap = [True, False]
+
+
+__C.HeartFailure.KNN_parameters_grid = edict()
+__C.HeartFailure.KNN_parameters_grid.n_neighbors = list(range(1, 16))
+__C.HeartFailure.KNN_parameters_grid.weights = ['uniform', 'distance']
+__C.HeartFailure.KNN_parameters_grid.metric = [
+    'euclidean', 'manhattan', 'minkowski']
+__C.HeartFailure.KNN_parameters_grid.algorithm = [
+    'auto', 'ball_tree', 'kd_tree', 'brute']
 
 # __C.HeartFailure.MODELS_PATH = '/home/hzxie/Datasets/HeartFailure/HeartFailureVox32/%s/%s/model.binvox'
 

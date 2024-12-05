@@ -1,8 +1,9 @@
 artifact_uri: file:///c:/Users/Seif%20Yasser/Desktop/Machine%20Learning/Project/Repo/Heart-Failure-Prediction/Src/mlruns/986396635406839365/0417d54ba69249adb940dca16c0b744c/artifacts
+deleted_time: 1733365423141
 end_time: 1733280779014
 entry_point_name: ''
 experiment_id: '986396635406839365'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: 0417d54ba69249adb940dca16c0b744c
 run_name: Grid_onehot_standard_scaled
 run_uuid: 0417d54ba69249adb940dca16c0b744c

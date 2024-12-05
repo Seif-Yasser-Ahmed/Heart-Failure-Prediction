@@ -1,11 +1,12 @@
 import mlflow
+from tqdm import tqdm
 
 
 def log_models_to_mlflow(model_names, reports, exp_name):
     mlflow.set_experiment(exp_name)
     mlflow.set_tracking_uri(uri="http://127.0.0.1:5000")
 
-    for i in range(len(reports)):
+    for i in tqdm(range(len(reports)), desc="Logging models to MLflow"):
         model_name = model_names[i]
         report = reports[model_name]
         model = report['model']

@@ -1,0 +1,16 @@
+artifact_uri: file:///c:/Users/Seif%20Yasser/Desktop/Machine%20Learning/Project/Repo/Heart-Failure-Prediction/Src/mlruns/986396635406839365/941194a7448a45a58fe92f4af54d3303/artifacts
+deleted_time: 1733368732507
+end_time: 1733368556771
+entry_point_name: ''
+experiment_id: '986396635406839365'
+lifecycle_stage: deleted
+run_id: 941194a7448a45a58fe92f4af54d3303
+run_name: Random_label_minmax_scaled
+run_uuid: 941194a7448a45a58fe92f4af54d3303
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1733368552536
+status: 3
+tags: []
+user_id: Seif Yasser
