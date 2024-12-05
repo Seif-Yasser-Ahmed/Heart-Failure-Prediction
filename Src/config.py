@@ -9,7 +9,7 @@ cfg = __C
 # __C.DATASETS = edict()
 __C.HeartFailure = edict()
 
-__C.HeartFailure.PATH = '../Dataset/dataset.csv'
+__C.HeartFailure.PATH = '../Dataset/heart.csv'
 
 __C.HeartFailure.LOGS_LOSSES_PATH = '../Logs/Losses'
 __C.HeartFailure.LOGS_PLOTS_PATH = '../Logs/Plots'
@@ -85,9 +85,25 @@ __C.HeartFailure.KNN_parameters_grid.algorithm = [
 #! Multi-Layer Perceptron
 __C.HeartFailure.MLP_parameters_grid = edict()
 
-#! Naive Bayes
-__C.HeartFailure.Bayes_parameters_grid = edict()
-__C.HeartFailure.Bayes_parameters_grid.var_smoothing = np.logspace(-9, 0, 50)
+#! Gaussian Naive Bayes
+__C.HeartFailure.GaussBayes_parameters_grid = edict()
+__C.HeartFailure.GaussBayes_parameters_grid.var_smoothing = np.logspace(
+    -9, 0, 500)
+
+
+#! Categorical Naive Bayes
+__C.HeartFailure.CatBayes_parameters_grid = edict()
+__C.HeartFailure.CatBayes_parameters_grid.alpha = [0.01, 0.1, 0.5, 1.0, 10.0]
+__C.HeartFailure.CatBayes_parameters_grid.fit_prior[True, False]
+
+
+#! Bernoulli Naive Bayes
+__C.HeartFailure.bernoulliBayes_parameters_grid = edict()
+__C.HeartFailure.bernoulliBayes_parameters_grid.alpha = [
+    0.01, 0.1, 0.5, 1.0, 10.0]
+__C.HeartFailure.bernoulliBayes_parameters_grid.fit_prior = [True, False]
+__C.HeartFailure.bernoulliBayes_parameters_grid.binarize = [
+    None, 0.0, 0.5, 1.0]
 
 #! XGBoost
 __C.HeartFailure.XGB_parameters_grid = edict()

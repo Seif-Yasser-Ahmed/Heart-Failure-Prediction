@@ -1,0 +1,6 @@
+artifact_location: mlflow-artifacts:/544995703135239493
+creation_time: 1733410996574
+experiment_id: '544995703135239493'
+last_update_time: 1733410996574
+lifecycle_stage: active
+name: GaussBayes_Preprocessing
