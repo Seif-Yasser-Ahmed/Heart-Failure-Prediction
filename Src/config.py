@@ -40,6 +40,7 @@ __C.HeartFailure.NUMERICAL_COLUMNS = [
     'Age', 'RestingBP', 'Cholesterol', 'FastingBS', 'MaxHR', 'Oldpeak']
 
 
+#! Support Vector Machine
 __C.HeartFailure.SVM_parameters_grid = edict()
 __C.HeartFailure.SVM_parameters_grid.C = [0.01, 0.1, 1, 10, 100]
 __C.HeartFailure.SVM_parameters_grid.gamma = [
@@ -49,6 +50,7 @@ __C.HeartFailure.SVM_parameters_grid.kernel = [
 __C.HeartFailure.SVM_parameters_grid.class_weight = ['balanced', None]
 
 
+#! Decision Tree
 __C.HeartFailure.DT_parameters_grid = edict()
 
 __C.HeartFailure.DT_parameters_grid.max_depth = [
@@ -59,6 +61,7 @@ __C.HeartFailure.DT_parameters_grid.min_samples_split = [2, 5, 10]
 __C.HeartFailure.DT_parameters_grid.criterion = ['gini', 'entropy']
 
 
+#! Random Forest
 __C.HeartFailure.RF_parameters_grid = edict()
 __C.HeartFailure.RF_parameters_grid.n_estimators = [
     int(x) for x in range(100, 1200, 100)]
@@ -70,6 +73,7 @@ __C.HeartFailure.RF_parameters_grid.min_samples_leaf = [1, 2, 4]
 __C.HeartFailure.RF_parameters_grid.bootstrap = [True, False]
 
 
+#! K-Nearest Neighbors
 __C.HeartFailure.KNN_parameters_grid = edict()
 __C.HeartFailure.KNN_parameters_grid.n_neighbors = list(range(1, 16))
 __C.HeartFailure.KNN_parameters_grid.weights = ['uniform', 'distance']
@@ -77,6 +81,22 @@ __C.HeartFailure.KNN_parameters_grid.metric = [
     'euclidean', 'manhattan', 'minkowski']
 __C.HeartFailure.KNN_parameters_grid.algorithm = [
     'auto', 'ball_tree', 'kd_tree', 'brute']
+
+#! Multi-Layer Perceptron
+__C.HeartFailure.MLP_parameters_grid = edict()
+
+#! Naive Bayes
+__C.HeartFailure.Bayes_parameters_grid = edict()
+
+#! XGBoost
+__C.HeartFailure.XGB_parameters_grid = edict()
+
+#! Logistic Regression
+__C.HeartFailure.LR_parameters_grid = edict()
+
+#! AdaBoost
+__C.HeartFailure.ADA_parameters_grid = edict()
+
 
 # __C.HeartFailure.MODELS_PATH = '/home/hzxie/Datasets/HeartFailure/HeartFailureVox32/%s/%s/model.binvox'
 
