@@ -1,8 +1,10 @@
 import mlflow
 from tqdm import tqdm
+import warnings
 
 
 def log_models_to_mlflow(model_names, reports, exp_name):
+    warnings.filterwarnings("ignore")
     mlflow.set_experiment(exp_name)
     mlflow.set_tracking_uri(uri="http://127.0.0.1:5000")
 
