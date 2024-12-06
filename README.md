@@ -65,49 +65,64 @@ It includes features such as age, cholesterol levels, resting blood pressure, an
 
 ## Files and Directory Structure
 
-plaintext
+```plaintext
 Heart-Failure-Prediction/
 │
-├── data/                               # Dataset files
-│   ├── heart_failure_clinical_records_dataset.csv
+├── Dataset/                               # Dataset files
+│   └── heart.csv
 │
-├── notebooks/                          # Jupyter notebooks for analysis
-│   ├── exploration_and_visualization.ipynb
-│   ├── cleaning_and_processing.ipynb
-│   ├── training_classifiers.ipynb
-│   ├── dendrogram_analysis.ipynb
+├── Logs/                          
+│   ├───Losses
+│   ├───Plots
+│   └───Reports
+│       ├───DT
+│       ├───GaussBayes
+│       ├───KNN
+│       └───SVM
+├── Models/                          
+│   ├───DT
+│   ├───GaussBayes
+│   ├───KNN
+│   └───SVM
 │
-├── outputs/                            # Output files and plots
+├── Src/                            
 │   ├── dendrogram.png
-│   ├── classification_reports/
-│       ├── naive_bayes_report.txt
-│       ├── svm_report.txt
-│       ├── knn_report.txt
-│       ├── decision_tree_report.txt
-│
-├── reports/                            # Final project reports
-│   ├── milestone_1_report.pdf
-│   ├── milestone_2_report.pdf
+│   ├── mlartifacts/
+│   ├── mlruns/
+│   ├── Notebooks/
+│   │   ├── naive_bayes_report.txt
+│   │   ├── svm_report.txt
+│   │   ├── knn_report.txt
+│   │   └── decision_tree_report.txt
+│   │
+│   ├── Utils/
+│   │   ├── mlflow.py
+│   │   ├── Preprocessor.py
+│   │   └── Visualizer.py
+│   │
+│   ├── config.py
+│   └── Main.ipynb
 │
 ├── requirements.txt                    # Python dependencies
 ├── README.md                           # Project documentation
+├── SECURITY.md                         # Project Security
 └── LICENSE                             # License file
-
+```
 
 ## Setup and Installation
 Clone the repository
-bash
+```bash
 git clone https://github.com/Seif-Yasser-Ahmed/Heart-Failure-Prediction.git
 cd Heart-Failure-Prediction
-
+```
 Install dependencies
-python
+```python
 pip install -r requirements.txt
-
-Ensure the dataset is placed in the Dataset/ directory.
+```
+Ensure the dataset is placed in the `Dataset/` directory.
 
 ## Usage
-1. Open the Jupyter notebooks in the Src/ directory to explore, process, and analyze the dataset
+1. Open the Jupyter notebooks in the `Src/` directory to explore, process, and analyze the dataset
 2. Run the cells in the notebooks sequentially to reproduce results.
 
 ## Results
