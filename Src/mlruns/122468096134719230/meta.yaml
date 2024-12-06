@@ -1,0 +1,6 @@
+artifact_location: mlflow-artifacts:/122468096134719230
+creation_time: 1733439275977
+experiment_id: '122468096134719230'
+last_update_time: 1733439275977
+lifecycle_stage: active
+name: SVM_No_Preprocessing

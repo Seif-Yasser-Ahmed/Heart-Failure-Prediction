@@ -1,0 +1,43 @@
+artifact_path: model
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.12.4
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.4.0
+mlflow_version: 2.15.0
+model_size_bytes: 121894
+model_uuid: 3fc7b5b6595e474096234f6dc5e1912e
+run_id: 48ff40495ce84ecfadc624fce65f6e4c
+saved_input_example_info:
+  artifact_path: input_example.json
+  pandas_orient: split
+  serving_input_path: serving_input_payload.json
+  type: dataframe
+signature:
+  inputs: '[{"type": "double", "name": "Age", "required": true}, {"type": "double",
+    "name": "RestingBP", "required": true}, {"type": "double", "name": "Cholesterol",
+    "required": true}, {"type": "double", "name": "MaxHR", "required": true}, {"type":
+    "double", "name": "Oldpeak", "required": true}, {"type": "double", "name": "Sex_F",
+    "required": true}, {"type": "double", "name": "Sex_M", "required": true}, {"type":
+    "double", "name": "ChestPainType_ASY", "required": true}, {"type": "double", "name":
+    "ChestPainType_ATA", "required": true}, {"type": "double", "name": "ChestPainType_NAP",
+    "required": true}, {"type": "double", "name": "ChestPainType_TA", "required":
+    true}, {"type": "double", "name": "RestingECG_LVH", "required": true}, {"type":
+    "double", "name": "RestingECG_Normal", "required": true}, {"type": "double", "name":
+    "RestingECG_ST", "required": true}, {"type": "double", "name": "ExerciseAngina_N",
+    "required": true}, {"type": "double", "name": "ExerciseAngina_Y", "required":
+    true}, {"type": "double", "name": "ST_Slope_Down", "required": true}, {"type":
+    "double", "name": "ST_Slope_Flat", "required": true}, {"type": "double", "name":
+    "ST_Slope_Up", "required": true}]'
+  outputs: '[{"type": "long", "name": "HeartDisease", "required": true}]'
+  params: null
+utc_time_created: '2024-12-05 23:14:13.353683'
