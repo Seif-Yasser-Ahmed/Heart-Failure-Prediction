@@ -1,8 +1,5 @@
 # Heart-Failure-Prediction
-This project explores clinical data, employs PCA for visualization, and develops classifiers like Naïve Bayes, SVM, KNN, and Decision Trees to predict heart failure risks. Includes dendrogram analysis for clustering insights and evaluates models using precision, recall, and F1-score.
-# Heart Failure Prediction
-
-This project aims to predict heart failure risk using machine learning models and the [Heart Failure Prediction Dataset](https://www.kaggle.com/datasets/fedesoriano/heart-failure-prediction/data). The analysis includes data preprocessing, visualization, classifier training, testing, and dendrogram analysis for clustering insights.
+This project explores clinical data, employs PCA for visualization, and develops classifiers like Naïve Bayes, SVM, KNN, and Decision Trees to predict heart failure risks. Includes dendrogram analysis for clustering insights and evaluates models using precision, recall, and F1-score, aiming to predict heart failure risk using machine learning models and the [Heart Failure Prediction Dataset](https://www.kaggle.com/datasets/fedesoriano/heart-failure-prediction/data).
 
 ---
 
