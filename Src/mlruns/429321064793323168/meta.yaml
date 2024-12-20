@@ -1,0 +1,6 @@
+artifact_location: mlflow-artifacts:/429321064793323168
+creation_time: 1734719887856
+experiment_id: '429321064793323168'
+last_update_time: 1734719887856
+lifecycle_stage: active
+name: KNN_No_Preprocessing

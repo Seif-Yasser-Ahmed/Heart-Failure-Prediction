@@ -107,17 +107,46 @@ __C.HeartFailure.bernoulliBayes_parameters_grid.binarize = [
 
 
 __C.HeartFailure.Hierarchical_parameters_grid = edict()
-__C.HeartFailure.Hierarchical_parameters_grid.n_clusters = [2, 3, 4, 5, 6]
+__C.HeartFailure.Hierarchical_parameters_grid.n_clusters = [2]
 __C.HeartFailure.Hierarchical_parameters_grid.metric = [
     'euclidean', 'l1', 'l2', 'manhattan', 'cosine']
 __C.HeartFailure.Hierarchical_parameters_grid.linkage = [
     'ward', 'complete', 'average', 'single']
 
+
+__C.HeartFailure.Kmeans_parameters_grid = edict()
+__C.HeartFailure.Kmeans_parameters_grid.n_clusters = [2]
+__C.HeartFailure.Kmeans_parameters_grid.init = ['k-means++', 'random']
+__C.HeartFailure.Kmeans_parameters_grid.n_init = [
+    10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+__C.HeartFailure.Kmeans_parameters_grid.max_iter = [
+    300, 400, 500, 600, 700, 800, 900, 1000]
+
+
 #! XGBoost
 __C.HeartFailure.XGB_parameters_grid = edict()
+__C.HeartFailure.XGB_parameters_grid.n_estimators = [
+    int(x) for x in range(100, 800, 100)]
+__C.HeartFailure.XGB_parameters_grid.max_depth = [
+    int(x) for x in range(10, 100, 10)]
+__C.HeartFailure.XGB_parameters_grid.learning_rate = [
+    0.0001, 0.001, 0.01, 0.1]
+__C.HeartFailure.XGB_parameters_grid.subsample = [0.5, 0.6, 1.0]
+__C.HeartFailure.XGB_parameters_grid.colsample_bytree = [
+    0.5, 0.6, 1.0]
+__C.HeartFailure.XGB_parameters_grid.gamma = [0, 1, 5]
+__C.HeartFailure.XGB_parameters_grid.reg_alpha = [0, 1, 5]
+__C.HeartFailure.XGB_parameters_grid.reg_lambda = [0, 1, 5]
+
 
 #! Logistic Regression
 __C.HeartFailure.LR_parameters_grid = edict()
+__C.HeartFailure.LR_parameters_grid.penalty = [
+    'l1', 'l2', 'elasticnet', 'none']
+__C.HeartFailure.LR_parameters_grid.C = [0.1, 1, 10, 100]
+__C.HeartFailure.LR_parameters_grid.solver = [
+    'newton-cg', 'lbfgs', 'liblinear', 'sag', 'saga']
+
 
 #! AdaBoost
 __C.HeartFailure.ADA_parameters_grid = edict()

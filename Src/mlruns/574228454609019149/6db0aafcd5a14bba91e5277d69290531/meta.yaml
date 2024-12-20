@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/574228454609019149/6db0aafcd5a14bba91e5277d69290531/artifacts
+end_time: 1734720189577
+entry_point_name: ''
+experiment_id: '574228454609019149'
+lifecycle_stage: active
+run_id: 6db0aafcd5a14bba91e5277d69290531
+run_name: Grid_label_logminmax_scaled
+run_uuid: 6db0aafcd5a14bba91e5277d69290531
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1734720185046
+status: 3
+tags: []
+user_id: Seif Yasser
