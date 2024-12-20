@@ -1,8 +1,9 @@
 artifact_uri: mlflow-artifacts:/820971313919637651/7a22738762374cc5ab430f217c36b1d2/artifacts
+deleted_time: 1734660295499
 end_time: 1733440235205
 entry_point_name: ''
 experiment_id: '820971313919637651'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: 7a22738762374cc5ab430f217c36b1d2
 run_name: Grid_label_standard_scaled
 run_uuid: 7a22738762374cc5ab430f217c36b1d2

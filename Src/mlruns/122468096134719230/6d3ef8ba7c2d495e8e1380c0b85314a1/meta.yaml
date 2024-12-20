@@ -1,8 +1,9 @@
 artifact_uri: mlflow-artifacts:/122468096134719230/6d3ef8ba7c2d495e8e1380c0b85314a1/artifacts
+deleted_time: 1734660200733
 end_time: 1733439318498
 entry_point_name: ''
 experiment_id: '122468096134719230'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: 6d3ef8ba7c2d495e8e1380c0b85314a1
 run_name: Grid_onehot_robust_scaled
 run_uuid: 6d3ef8ba7c2d495e8e1380c0b85314a1

@@ -105,6 +105,14 @@ __C.HeartFailure.bernoulliBayes_parameters_grid.fit_prior = [True, False]
 __C.HeartFailure.bernoulliBayes_parameters_grid.binarize = [
     None, 0.0, 0.5, 1.0]
 
+
+__C.HeartFailure.Hierarchical_parameters_grid = edict()
+__C.HeartFailure.Hierarchical_parameters_grid.n_clusters = [2, 3, 4, 5, 6]
+__C.HeartFailure.Hierarchical_parameters_grid.metric = [
+    'euclidean', 'l1', 'l2', 'manhattan', 'cosine']
+__C.HeartFailure.Hierarchical_parameters_grid.linkage = [
+    'ward', 'complete', 'average', 'single']
+
 #! XGBoost
 __C.HeartFailure.XGB_parameters_grid = edict()
 
