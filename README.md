@@ -95,35 +95,36 @@ Heart-Failure-Prediction/
 │       ├── GaussBayes
 │       ├── KNN
 │       └── SVM
+│       └── EDA
+│       └── Logistic
 │
 ├── Models/  
 │   ├── DT
 │   ├── GaussBayes
 │   ├── KNN
 │   └── SVM
+│   └── Logistic
 │
 ├── Src/  
-│   ├── dendrogram.png
+│   ├── figures/
 │   ├── mlartifacts/
 │   ├── mlruns/
 │   ├── Notebooks/
-│   │   ├── naive_bayes_report.txt
-│   │   ├── svm_report.txt
-│   │   ├── knn_report.txt
-│   │   └── decision_tree_report.txt
+│   │   ├── DT.ipynb
+│   │   └── Naive Bayes.ipynb
 │   └── Utils/
 │       ├── mlflow.py
 │       ├── Preprocessor.py
 │       └── Visualizer.py
 │
 │   ├── config.py
+│   ├── Logger.py
 │   └── Main.ipynb
 │
 ├── requirements.txt                    
 ├── README.md                           
 ├── SECURITY.md                         
-├── LICENSE                             
-└── Heart-Failure.pdf                   
+└── LICENSE                                             
 ```
 
 ---
@@ -140,7 +141,7 @@ Install dependencies
 pip install -r requirements.txt
 ```
 Ensure the dataset is placed in the `Dataset/` directory.
-
+   
 ---
 
 ## Usage
@@ -151,7 +152,6 @@ Ensure the dataset is placed in the `Dataset/` directory.
 ---
 
 ## Results
-
 The results of the classifiers are summarized as follows:
 
 | Model (Best Model)  | Accuracy (%) |Precision (C0-C1) | Recall(C0-C1) | F1-Score(C0-C1) |
@@ -161,6 +161,23 @@ The results of the classifiers are summarized as follows:
 | SVM                 |    85        |0.82 - 0.93       | 0.92 - 0.85   | 0.87 - 0.89     |
 | KNN                 |    89          |0.86 -   0.92  | 0.89 -   0.89 | 0.87 -   0.9       |
 | Decision Trees      |    86          |0.83 -   0.88  | 0.84 -  0.87 | 0.83 -  0.88        |
+### Viewing Results
+You can view the results using one of the following options:
+1. **MLflow Tracking UI:** <br>
+   Navigate to the `Src/` directory and start the MLflow UI:
+   ```bash
+   cd Src
+   mlflow ui
+   ```
+   Open the provided local URL (e.g., [http://127.0.0.1:5000](http://127.0.0.1:5000)) in your browser to explore the experiment results.
+2. **Streamlit Dashboard:** <br>
+   Navigate to the `Src/` directory and run the Streamlit app:
+   ```bash
+   cd Src
+   streamlit run Logger.py
+
+   ```
+
 
 
 
