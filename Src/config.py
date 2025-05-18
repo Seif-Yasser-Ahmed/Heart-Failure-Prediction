@@ -60,6 +60,48 @@ __C.HeartFailure.DT_parameters_grid.min_samples_split = [2, 5, 10]
 # __C.HeartFailure.DT_parameters_grid.MAX_FEATURES = ['auto', 'sqrt', 'log2']
 __C.HeartFailure.DT_parameters_grid.criterion = ['gini', 'entropy']
 
+#! K-Nearest Neighbors
+__C.HeartFailure.KNN_parameters_grid = edict()
+__C.HeartFailure.KNN_parameters_grid.n_neighbors = list(range(1, 16))
+__C.HeartFailure.KNN_parameters_grid.weights = ['uniform', 'distance']
+__C.HeartFailure.KNN_parameters_grid.metric = [
+    'euclidean', 'manhattan', 'minkowski']
+__C.HeartFailure.KNN_parameters_grid.algorithm = [
+    'auto', 'ball_tree', 'kd_tree', 'brute']
+
+
+#! Gaussian Naive Bayes
+__C.HeartFailure.GaussBayes_parameters_grid = edict()
+__C.HeartFailure.GaussBayes_parameters_grid.var_smoothing = np.logspace(
+    -9, 0, 500)
+
+#! Hierarchical
+__C.HeartFailure.Hierarchical_parameters_grid = edict()
+__C.HeartFailure.Hierarchical_parameters_grid.n_clusters = [2]
+__C.HeartFailure.Hierarchical_parameters_grid.metric = [
+    'euclidean', 'l1', 'l2', 'manhattan', 'cosine']
+__C.HeartFailure.Hierarchical_parameters_grid.linkage = [
+    'ward', 'complete', 'average', 'single']
+
+
+#! Kmeans
+__C.HeartFailure.Kmeans_parameters_grid = edict()
+__C.HeartFailure.Kmeans_parameters_grid.n_clusters = [2]
+__C.HeartFailure.Kmeans_parameters_grid.init = ['k-means++', 'random']
+__C.HeartFailure.Kmeans_parameters_grid.n_init = [
+    10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+__C.HeartFailure.Kmeans_parameters_grid.max_iter = [
+    300, 400, 500, 600, 700, 800, 900, 1000]
+
+
+#! Logistic Regression
+__C.HeartFailure.LR_parameters_grid = edict()
+__C.HeartFailure.LR_parameters_grid.penalty = [
+    'l1', 'l2', 'elasticnet', 'none']
+__C.HeartFailure.LR_parameters_grid.C = [0.1, 1, 10, 100]
+__C.HeartFailure.LR_parameters_grid.solver = [
+    'newton-cg', 'lbfgs', 'liblinear', 'sag', 'saga']
+
 
 #! Random Forest
 __C.HeartFailure.RF_parameters_grid = edict()
@@ -73,22 +115,8 @@ __C.HeartFailure.RF_parameters_grid.min_samples_leaf = [1, 2, 4]
 __C.HeartFailure.RF_parameters_grid.bootstrap = [True, False]
 
 
-#! K-Nearest Neighbors
-__C.HeartFailure.KNN_parameters_grid = edict()
-__C.HeartFailure.KNN_parameters_grid.n_neighbors = list(range(1, 16))
-__C.HeartFailure.KNN_parameters_grid.weights = ['uniform', 'distance']
-__C.HeartFailure.KNN_parameters_grid.metric = [
-    'euclidean', 'manhattan', 'minkowski']
-__C.HeartFailure.KNN_parameters_grid.algorithm = [
-    'auto', 'ball_tree', 'kd_tree', 'brute']
-
 #! Multi-Layer Perceptron
 __C.HeartFailure.MLP_parameters_grid = edict()
-
-#! Gaussian Naive Bayes
-__C.HeartFailure.GaussBayes_parameters_grid = edict()
-__C.HeartFailure.GaussBayes_parameters_grid.var_smoothing = np.logspace(
-    -9, 0, 500)
 
 
 #! Categorical Naive Bayes
@@ -106,23 +134,6 @@ __C.HeartFailure.bernoulliBayes_parameters_grid.binarize = [
     None, 0.0, 0.5, 1.0]
 
 
-__C.HeartFailure.Hierarchical_parameters_grid = edict()
-__C.HeartFailure.Hierarchical_parameters_grid.n_clusters = [2]
-__C.HeartFailure.Hierarchical_parameters_grid.metric = [
-    'euclidean', 'l1', 'l2', 'manhattan', 'cosine']
-__C.HeartFailure.Hierarchical_parameters_grid.linkage = [
-    'ward', 'complete', 'average', 'single']
-
-
-__C.HeartFailure.Kmeans_parameters_grid = edict()
-__C.HeartFailure.Kmeans_parameters_grid.n_clusters = [2]
-__C.HeartFailure.Kmeans_parameters_grid.init = ['k-means++', 'random']
-__C.HeartFailure.Kmeans_parameters_grid.n_init = [
-    10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
-__C.HeartFailure.Kmeans_parameters_grid.max_iter = [
-    300, 400, 500, 600, 700, 800, 900, 1000]
-
-
 #! XGBoost
 __C.HeartFailure.XGB_parameters_grid = edict()
 __C.HeartFailure.XGB_parameters_grid.n_estimators = [
@@ -137,15 +148,6 @@ __C.HeartFailure.XGB_parameters_grid.colsample_bytree = [
 __C.HeartFailure.XGB_parameters_grid.gamma = [0, 1, 5]
 __C.HeartFailure.XGB_parameters_grid.reg_alpha = [0, 1, 5]
 __C.HeartFailure.XGB_parameters_grid.reg_lambda = [0, 1, 5]
-
-
-#! Logistic Regression
-__C.HeartFailure.LR_parameters_grid = edict()
-__C.HeartFailure.LR_parameters_grid.penalty = [
-    'l1', 'l2', 'elasticnet', 'none']
-__C.HeartFailure.LR_parameters_grid.C = [0.1, 1, 10, 100]
-__C.HeartFailure.LR_parameters_grid.solver = [
-    'newton-cg', 'lbfgs', 'liblinear', 'sag', 'saga']
 
 
 #! AdaBoost
